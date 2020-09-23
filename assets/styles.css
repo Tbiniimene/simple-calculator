@@ -1,0 +1,67 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: "Russo One", sans-serif;
+    font-weight: normal;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #223744;
+  }
+  .calculator {
+    margin-top: 75px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 600px;
+    border-radius: 1%;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    box-shadow: 0 -15px 15px rgba(255,255,255,0.05),
+                inset 0 -15px 15px rgba(255,255,255,0.05),
+                0 15px 15px rgba(0,0,0,0.05),
+                inset 0 15px 15px rgba(0,0,0,0.05);
+  } 
+ 
+  .calculator > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid  #223744;
+    outline: none;
+    background-color: #223744;
+    color: rgba(255, 255, 255, .75);
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px rgba(255,255,255,0.05),
+                inset 0 -15px 15px rgba(255,255,255,0.05),
+                0 15px 15px rgba(0,0,0,0.05),
+                inset 0 15px 15px rgba(0,0,0,0.05);
+  }
+  
+
+  button > .clear{
+    outline: none;
+    background-color: #223744;
+  }
+  .span-two {
+    grid-column: span 2;
+  }
+  
+  .output {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    grid-column: 1 / -1;
+    padding: 10px;
+    background-color:  #223744;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  
+  .output .current {
+    color: white;
+    font-size: 2.5rem;
+  } 
+
