@@ -6,6 +6,8 @@ const deleteLast = document.getElementById('delete')
 const clear = document.getElementById('ac')
 var reset =false;
 let nop=0;
+var ListOfopeartions=["+","-","%","*","÷"];
+
   numbers.forEach(button => {
     button.addEventListener('click', () => {
         //reset to the current value after completing equation
@@ -88,8 +90,15 @@ let nop=0;
   clear.addEventListener('click', button => {
     current.innerText = ''
     operation = undefined
+    rest=false
+    nop=0
   })
 
   deleteLast.addEventListener('click', button => {
+    
+    if(ListOfopeartions.includes(current.innerText.toString().charAt(current.innerText.toString().length-1))){
+        nop=0;
+      }
     current.innerText = current.innerText.toString().slice(0, -1)
+    
   })
