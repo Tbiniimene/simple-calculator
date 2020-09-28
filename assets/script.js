@@ -48,12 +48,10 @@ var ListOfopeartions=["+","-","%","*","÷"];
   })
 
   equals.addEventListener('click', button => {
-  
     const equation=current.innerText.toString();
     let result;
     let n;
     if (current.innerText==='') return
-    
     if(operation==='+'){
       n=equation.indexOf('+');
       first=equation.slice(0,n);
@@ -90,12 +88,11 @@ var ListOfopeartions=["+","-","%","*","÷"];
   clear.addEventListener('click', button => {
     current.innerText = ''
     operation = undefined
-    rest=false
+    reset=false
     nop=0
   })
 
-  deleteLast.addEventListener('click', button => {
-    
+  deleteLast.addEventListener('click', button => { 
     if(ListOfopeartions.includes(current.innerText.toString().charAt(current.innerText.toString().length-1))){
         nop=0;
       }
